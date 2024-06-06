@@ -19,8 +19,8 @@ USE DATABASE GIT_REPO;
 USE SCHEMA PUBLIC;
 CREATE OR REPLACE SECRET GIT_SECRET 
     TYPE = PASSWORD 
-    USERNAME = '<your_git_user' 
-    PASSWORD = '<your_personal_access_token>';
+    USERNAME = 'bvm82482' 
+    PASSWORD = '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';
 
 --Create an API integration for interacting with the repository API
 USE ROLE ACCOUNTADMIN; 
@@ -29,7 +29,7 @@ USE ROLE GIT_ADMIN;
 
 CREATE OR REPLACE API INTEGRATION GIT_API_INTEGRATION 
     API_PROVIDER = GIT_HTTPS_API 
-    API_ALLOWED_PREFIXES = ('https://github.com/<your_git_user>') 
+    API_ALLOWED_PREFIXES = ('https://github.com/bvm82482') 
     ALLOWED_AUTHENTICATION_SECRETS = (GIT_SECRET) 
     ENABLED = TRUE;
     
